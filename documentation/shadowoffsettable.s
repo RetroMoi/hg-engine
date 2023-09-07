@@ -190,7 +190,7 @@
 /* SPECIES_MARILL          */ .byte 0
 /* SPECIES_AZUMARILL       */ .byte 0
 /* SPECIES_SUDOWOODO       */ .byte 0
-/* SPECIES_POLITOED        */ .byte 0
+/* SPECIES_POLITOED        */ .byte 4
 /* SPECIES_HOPPIP          */ .byte -4
 /* SPECIES_SKIPLOOM        */ .byte 1
 /* SPECIES_JUMPLUFF        */ .byte 2

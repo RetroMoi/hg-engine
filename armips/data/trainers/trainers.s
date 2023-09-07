@@ -8697,7 +8697,7 @@ trainerdata 260, "Red"
         // mon 0
         ivs 250
         abilityslot 0
-        level 88
+        level 90
         pokemon SPECIES_PIKACHU
         item ITEM_LIGHT_BALL
         move MOVE_VOLT_TACKLE
@@ -8709,7 +8709,7 @@ trainerdata 260, "Red"
         // mon 1
         ivs 250
         abilityslot 32
-        level 80
+        level 85
         pokemon SPECIES_LAPRAS
         item ITEM_NONE
         move MOVE_BLIZZARD
@@ -8721,7 +8721,7 @@ trainerdata 260, "Red"
         // mon 2
         ivs 250
         abilityslot 32
-        level 82
+        level 88
         pokemon SPECIES_SNORLAX
         item ITEM_NONE
         move MOVE_SHADOW_BALL
@@ -8733,7 +8733,7 @@ trainerdata 260, "Red"
         // mon 3
         ivs 250
         abilityslot 0
-        level 84
+        level 88
         pokemon SPECIES_VENUSAUR
         item ITEM_NONE
         move MOVE_SLUDGE_BOMB
@@ -8745,7 +8745,7 @@ trainerdata 260, "Red"
         // mon 4
         ivs 250
         abilityslot 0
-        level 84
+        level 88
         pokemon SPECIES_CHARIZARD
         item ITEM_NONE
         move MOVE_FLARE_BLITZ
@@ -8757,7 +8757,7 @@ trainerdata 260, "Red"
         // mon 5
         ivs 250
         abilityslot 0
-        level 84
+        level 88
         pokemon SPECIES_BLASTOISE
         item ITEM_NONE
         move MOVE_FOCUS_BLAST
@@ -24996,7 +24996,7 @@ trainerdata 714, "Whitney"
         // mon 0
         ivs 250
         abilityslot 0
-        level 52
+        level 55
         pokemon SPECIES_GIRAFARIG
         item ITEM_NONE
         move MOVE_PSYCHIC
@@ -25008,7 +25008,7 @@ trainerdata 714, "Whitney"
         // mon 1
         ivs 200
         abilityslot 0
-        level 50
+        level 52
         pokemon SPECIES_LICKILICKY
         item ITEM_NONE
         move MOVE_WRING_OUT
@@ -25020,7 +25020,7 @@ trainerdata 714, "Whitney"
         // mon 2
         ivs 200
         abilityslot 0
-        level 54
+        level 55
         pokemon SPECIES_BIBAREL
         item ITEM_NONE
         move MOVE_DOUBLE_TEAM
@@ -25033,18 +25033,18 @@ trainerdata 714, "Whitney"
         ivs 250
         abilityslot 32
         level 54
-        pokemon SPECIES_DELCATTY
-        item ITEM_NONE
-        move MOVE_FAKE_OUT
-        move MOVE_ASSIST
-        move MOVE_CALM_MIND
-        move MOVE_BATON_PASS
+        pokemon SPECIES_BLISSEY
+        item ITEM_LEFTOVERS
+        move MOVE_SOFT_BOILED
+        move MOVE_SEISMIC_TOSS
+        move MOVE_THUNDER_WAVE
+        move MOVE_TOXIC
         ballseal 0
 
         // mon 4
         ivs 200
         abilityslot 0
-        level 52
+        level 55
         pokemon SPECIES_CLEFABLE
         item ITEM_NONE
         move MOVE_BLIZZARD
@@ -25056,7 +25056,7 @@ trainerdata 714, "Whitney"
         // mon 5
         ivs 200
         abilityslot 32
-        level 58
+        level 60
         pokemon SPECIES_MILTANK
         item ITEM_LUM_BERRY
         move MOVE_BODY_SLAM
