@@ -31,7 +31,7 @@ trainerdata 0, "-"
     endparty
 
 trainerdata 1, "Silver"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass CLASS_RIVAL
     battletype 0
     nummons 3
@@ -67,7 +67,7 @@ trainerdata 1, "Silver"
     endparty
 
 trainerdata 2, "Silver"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass CLASS_RIVAL
     battletype 0
     nummons 1
@@ -85,11 +85,12 @@ trainerdata 2, "Silver"
         abilityslot 0
         level 5
         pokemon SPECIES_CYNDAQUIL
+		shinylock 1
         ballseal 0
     endparty
 
 trainerdata 3, "Silver"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass CLASS_RIVAL
     battletype 0
     nummons 1
@@ -107,6 +108,7 @@ trainerdata 3, "Silver"
         abilityslot 0
         level 5
         pokemon SPECIES_TOTODILE
+		shinylock 1
         ballseal 0
     endparty
 
@@ -9031,7 +9033,7 @@ trainerdata 264, "Silver"
     endparty
 
 trainerdata 265, "Silver"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass CLASS_RIVAL
     battletype 0
     nummons 1
@@ -9049,6 +9051,7 @@ trainerdata 265, "Silver"
         abilityslot 0
         level 5
         pokemon SPECIES_CHIKORITA
+		shinylock 1
         ballseal 0
     endparty
 
