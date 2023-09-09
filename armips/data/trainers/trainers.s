@@ -7828,7 +7828,7 @@ trainerdata 244, "Lance"
         ballseal 0
     endparty
 
-trainerdata 245, "Will"
+trainerdata 245, "M.C."
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_ELITE_FOUR_0
     battletype 0
@@ -7846,12 +7846,12 @@ trainerdata 245, "Will"
         ivs 250
         abilityslot 0
         level 40
-        pokemon SPECIES_XATU
-        item ITEM_NONE
-        move MOVE_U_TURN
-        move MOVE_ME_FIRST
-        move MOVE_CONFUSE_RAY
-        move MOVE_PSYCHIC
+        pokemon SPECIES_ABOMASNOW
+        item ITEM_SITRUS_BERRY
+        move MOVE_BLIZZARD
+        move MOVE_WOOD_HAMMER
+        move MOVE_LEECH_SEED
+        move MOVE_PROTECT
         ballseal 0
 
         // mon 1
@@ -7870,12 +7870,12 @@ trainerdata 245, "Will"
         ivs 250
         abilityslot 0
         level 41
-        pokemon SPECIES_EXEGGUTOR
-        item ITEM_NONE
+        pokemon SPECIES_NINETALES_ALOLAN
+        item ITEM_LEFTOVERS
         move MOVE_REFLECT
-        move MOVE_HYPNOSIS
-        move MOVE_EGG_BOMB
-        move MOVE_PSYCHIC
+        move MOVE_LIGHT_SCREEN
+        move MOVE_MOONBLAST
+        move MOVE_BLIZZARD
         ballseal 0
 
         // mon 3
@@ -7903,7 +7903,7 @@ trainerdata 245, "Will"
         ballseal 0
     endparty
 
-trainerdata 246, "Karen"
+trainerdata 246, "John K."
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_ELITE_FOUR_1
     battletype 0
@@ -7978,7 +7978,7 @@ trainerdata 246, "Karen"
         ballseal 0
     endparty
 
-trainerdata 247, "Koga"
+trainerdata 247, "Raziel"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_ELITE_FOUR_2
     battletype 0
@@ -14408,7 +14408,7 @@ trainerdata 417, "Jenn"
         ballseal 0
     endparty
 
-trainerdata 418, "Bruno"
+trainerdata 418, "Moi"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_ELITE_FOUR_3
     battletype 0
@@ -24310,7 +24310,7 @@ trainerdata 701, "Lance"
         ballseal 0
     endparty
 
-trainerdata 702, "Will"
+trainerdata 702, "M.C."
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_ELITE_FOUR_0
     battletype 0
@@ -24397,7 +24397,7 @@ trainerdata 702, "Will"
         ballseal 0
     endparty
 
-trainerdata 703, "Koga"
+trainerdata 703, "Raziel"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_ELITE_FOUR_2
     battletype 0
@@ -24484,7 +24484,7 @@ trainerdata 703, "Koga"
         ballseal 0
     endparty
 
-trainerdata 704, "Bruno"
+trainerdata 704, "Moi"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_ELITE_FOUR_3
     battletype 0
@@ -24571,7 +24571,7 @@ trainerdata 704, "Bruno"
         ballseal 0
     endparty
 
-trainerdata 705, "Karen"
+trainerdata 705, "John K."
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_ELITE_FOUR_1
     battletype 0
