@@ -90,7 +90,7 @@ trainerdata 2, "Silver"
     endparty
 
 trainerdata 3, "Silver"
-    trainermontype TRAINER_DATA_TYPE_SHINY_LOCK
+    trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_BALL | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS
     trainerclass CLASS_RIVAL
     battletype 0
     nummons 1
@@ -106,9 +106,11 @@ trainerdata 3, "Silver"
         // mon 0
         ivs 0
         abilityslot 0
-        level 5
+        level 6
         pokemon SPECIES_TOTODILE
+		nature NATURE_ADAMANT
 		shinylock 1
+        additionalflags 0 // no further entries data will be read, but needs to be here as the trainer data structure specifies additionalflags
         ballseal 0
     endparty
 
@@ -17186,7 +17188,7 @@ trainerdata 494, "Georgina"
     endparty
 
 trainerdata 495, "Boy"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass CLASS_PASSERBY
     battletype 0
     nummons 1
@@ -17204,11 +17206,12 @@ trainerdata 495, "Boy"
         abilityslot 0
         level 5
         pokemon SPECIES_CHIKORITA
+		shinylock 0
         ballseal 0
     endparty
 
 trainerdata 496, "Boy"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass CLASS_PASSERBY
     battletype 0
     nummons 1
@@ -17226,11 +17229,12 @@ trainerdata 496, "Boy"
         abilityslot 0
         level 5
         pokemon SPECIES_CYNDAQUIL
+		shinylock 0
         ballseal 0
     endparty
 
 trainerdata 497, "Boy"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass CLASS_PASSERBY
     battletype 0
     nummons 1
@@ -17248,6 +17252,7 @@ trainerdata 497, "Boy"
         abilityslot 0
         level 5
         pokemon SPECIES_TOTODILE
+		shinylock 0
         ballseal 0
     endparty
 
