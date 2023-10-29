@@ -250,7 +250,7 @@ trainerdata 7, "Irwin"
         ballseal 0
     endparty
 
-trainerdata 8, "Joey"
+trainerdata 8, "José"
     trainermontype TRAINER_DATA_TYPE_NOTHING
     trainerclass CLASS_YOUNGSTER
     nummons 1
@@ -9423,7 +9423,7 @@ trainerdata 278, "Kenji"
         ballseal 0
     endparty
 
-trainerdata 279, "Joey"
+trainerdata 279, "José"
     trainermontype TRAINER_DATA_TYPE_NOTHING
     trainerclass CLASS_YOUNGSTER
     nummons 1
@@ -9444,7 +9444,7 @@ trainerdata 279, "Joey"
         ballseal 0
     endparty
 
-trainerdata 280, "Joey"
+trainerdata 280, "José"
     trainermontype TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_YOUNGSTER
     nummons 1
@@ -17251,7 +17251,7 @@ trainerdata 509, "Huey"
         ballseal 0
     endparty
 
-trainerdata 510, "Joey"
+trainerdata 510, "José"
     trainermontype TRAINER_DATA_TYPE_MOVES
     trainerclass CLASS_YOUNGSTER
     nummons 1
