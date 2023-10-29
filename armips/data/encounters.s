@@ -444,8 +444,8 @@ pokemon SPECIES_METAPOD
 pokemon SPECIES_AUDINO
 pokemon SPECIES_CATERPIE
 pokemon SPECIES_METAPOD
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_METAPOD
+pokemon SPECIES_PICHU
+pokemon SPECIES_PICHU
 
 // day encounter slots
 pokemon SPECIES_PIDGEY
@@ -458,8 +458,8 @@ pokemon SPECIES_METAPOD
 pokemon SPECIES_AUDINO
 pokemon SPECIES_CATERPIE
 pokemon SPECIES_METAPOD
-pokemon SPECIES_CATERPIE
-pokemon SPECIES_METAPOD
+pokemon SPECIES_PICHU
+pokemon SPECIES_PICHU
 
 // night encounter slots
 pokemon SPECIES_SPINARAK
@@ -472,8 +472,8 @@ pokemon SPECIES_RATTATA
 pokemon SPECIES_AUDINO
 pokemon SPECIES_HOOTHOOT
 pokemon SPECIES_HOOTHOOT
-pokemon SPECIES_HOOTHOOT
-pokemon SPECIES_HOOTHOOT
+pokemon SPECIES_PICHU
+pokemon SPECIES_PICHU
 
 // hoenn encounter slots
 pokemon SPECIES_WHISMUR
