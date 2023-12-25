@@ -141,43 +141,61 @@ void ServerBeforeAct(void *bw, struct BattleStruct *sp)
                 if (sp->client_act_work[0][3] != SELECT_ESCAPE_COMMAND &&
                     sp->client_act_work[2][3] != SELECT_ESCAPE_COMMAND)
                 {
-                    //player requests mega
-                    if (!(client_no & 1))
-                    {
-                        if (CheckCanMega(sp, client_no) && newBS.playerWantMega)
+                    if (BattleTypeGet(bw) & BATTLE_TYPE_MULTI) {
+                        //player requests mega
+                        if (!(client_no))
                         {
-                            sp->battlemon[client_no].canMega = 1;
-                            newBS.SideMega[0] = TRUE;
-                            flag = TRUE;
+                            if (CheckCanMega(sp, client_no) && (newBS.playerWantMega & No2Bit(client_no)) != 0)
+                            {
+                                sp->battlemon[client_no].canMega = 1;
+                                newBS.SideMega[0] = TRUE;
+                                if(sp->battlemon[client_no].id_no == sp->battlemon[2].id_no)
+                                    newBS.SideMega[2] = TRUE;
+                                flag = TRUE;
+                            }
+                        }
+                        //ai requests mega
+                        else
+                        { 
+                            if (CheckCanMega(sp, client_no))
+                            {
+                                sp->battlemon[client_no].canMega = 1;
+                                newBS.SideMega[client_no] = TRUE;
+                                flag = TRUE;
+                            }
                         }
                     }
-                    //ai requests mega
-                    else
-                    { 
-                        if (CheckCanMega(sp, client_no))
+                    else {
+                        //player requests mega
+                        if (!(client_no & 1))
                         {
-                            sp->battlemon[client_no].canMega = 1;
-                            newBS.SideMega[1] = TRUE;
-                            flag = TRUE;
+                            if (CheckCanMega(sp, client_no) && (newBS.playerWantMega & No2Bit(client_no)) != 0)
+                            {
+                                sp->battlemon[client_no].canMega = 1;
+                                newBS.SideMega[0] = TRUE;
+                                newBS.SideMega[2] = TRUE;
+                                flag = TRUE;
+                            }
                         }
-                    }
-
+                        //ai requests mega
+                        else
+                        { 
+                            if (CheckCanMega(sp, client_no))
+                            {
+                                sp->battlemon[client_no].canMega = 1;
+                                newBS.SideMega[1] = TRUE;
+                                newBS.SideMega[3] = TRUE;
+                                flag = TRUE;
+                            }
+                        }
+                    }                  
                 }
 
                 if (flag)
                 {
                     newBS.needMega[client_no] = MEGA_NEED;
-                    if ((sp->battlemon[client_no].species == SPECIES_CHARIZARD && sp->battlemon[client_no].item == ITEM_CHARIZARDITE_Y)
-                     || (sp->battlemon[client_no].species == SPECIES_MEWTWO && sp->battlemon[client_no].item == ITEM_MEWTWONITE_Y))
-                    {
-                        sp->battlemon[client_no].form_no = 2;
-                        BattleFormChange(client_no, 2, bw, sp, FALSE);
-                    }
-                    else
-                    {
-                        sp->battlemon[client_no].form_no = 1;
-                        BattleFormChange(client_no, 1, bw, sp, FALSE);
-                    }
+                    sp->battlemon[client_no].form_no = GrabMegaTargetForm(sp->battlemon[client_no].species, sp->battlemon[client_no].item);
+                    BattleFormChange(client_no, sp->battlemon[client_no].form_no, bw, sp, FALSE);
                 }
             }
             sp->sba_seq_no++;
@@ -233,23 +251,18 @@ static BOOL MegaEvolution(void *bw, struct BattleStruct *sp)
         client_no = sp->turn_order[i];
         if (newBS.needMega[client_no] == MEGA_NEED && sp->battlemon[sp->attack_client].hp)
         {
-            if (client_no == 0 || client_no == 2)
+            if (BattleTypeGet(bw) & BATTLE_TYPE_MULTI) 
+            {
+                if (client_no == 0 || (client_no == 2 && sp->battlemon[client_no].id_no == sp->battlemon[0].id_no))
+                    newBS.PlayerMegaed = TRUE;
+            }
+            else if (client_no == 0 || client_no == 2)
             {
                 newBS.PlayerMegaed = TRUE;
             }
 
-            // handle charizard/mewtwo branch mega evos
-            if ((sp->battlemon[client_no].species == SPECIES_CHARIZARD && sp->battlemon[client_no].item == ITEM_CHARIZARDITE_Y) || 
-                (sp->battlemon[client_no].species == SPECIES_MEWTWO && sp->battlemon[client_no].item == ITEM_MEWTWONITE_Y))
-            {
-                BattleFormChange(client_no, 2, bw, sp, TRUE);
-                sp->battlemon[client_no].form_no = 2;
-            }
-            else
-            {
-                BattleFormChange(client_no, 1, bw, sp, TRUE);
-                sp->battlemon[client_no].form_no = 1;
-            }
+            sp->battlemon[client_no].form_no = GrabMegaTargetForm(sp->battlemon[client_no].species, sp->battlemon[client_no].item);
+            BattleFormChange(client_no, sp->battlemon[client_no].form_no, bw, sp, TRUE);
             
             newBS.needMega[client_no] = MEGA_CHECK_APPER;
             sp->client_work = client_no;
