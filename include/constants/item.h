@@ -304,6 +304,9 @@
 #define ITEM_SHED_SHELL      295
 #define ITEM_BIG_ROOT        296
 #define ITEM_CHOICE_SPECS    297
+
+#define IS_ITEM_ARCEUS_PLATE(item) ((item >= ITEM_FLAME_PLATE && item <= ITEM_IRON_PLATE) || (item == ITEM_PIXIE_PLATE))
+
 #define ITEM_FLAME_PLATE     298
 #define ITEM_SPLASH_PLATE    299
 #define ITEM_ZAP_PLATE       300
@@ -707,6 +710,8 @@
 #define ITEM_DOUSE_DRIVE        (ITEM_PIXIE_PLATE + 89)
 #define ITEM_SHOCK_DRIVE        (ITEM_PIXIE_PLATE + 90)
 
+#define IS_ITEM_GENESECT_DRIVE(item) (item >= ITEM_BURN_DRIVE && item <= ITEM_SHOCK_DRIVE)
+
 //Fossils
 #define ITEM_COVER_FOSSIL       (ITEM_PIXIE_PLATE + 91)
 #define ITEM_PLUME_FOSSIL       (ITEM_PIXIE_PLATE + 92)
@@ -738,6 +743,8 @@
 #define ITEM_FAIRY_GEM          (ITEM_PIXIE_PLATE + 116)
 
 //Memories
+#define IS_ITEM_MEMORY(item) (item >= ITEM_FIGHTING_MEMORY && item <= ITEM_FAIRY_MEMORY)
+
 #define ITEM_FIGHTING_MEMORY    (ITEM_PIXIE_PLATE + 117)
 #define ITEM_FLYING_MEMORY      (ITEM_PIXIE_PLATE + 118)
 #define ITEM_POISON_MEMORY      (ITEM_PIXIE_PLATE + 119)
@@ -821,7 +828,34 @@
 #define ITEM_SYLPH_SCOPE        (ITEM_PIXIE_PLATE + 185)
 #define ITEM_TEA                (ITEM_PIXIE_PLATE + 186)
 
+//Mints
+#define IS_ITEM_NATURE_MINT(item) (item >= ITEM_LONELY_MINT && item <= ITEM_SERIOUS_MINT)
+
+#define ITEM_LONELY_MINT        (ITEM_PIXIE_PLATE + 187)
+#define ITEM_ADAMANT_MINT       (ITEM_PIXIE_PLATE + 188)
+#define ITEM_NAUGHTY_MINT       (ITEM_PIXIE_PLATE + 189)
+#define ITEM_BRAVE_MINT         (ITEM_PIXIE_PLATE + 190)
+#define ITEM_BOLD_MINT          (ITEM_PIXIE_PLATE + 191)
+#define ITEM_IMPISH_MINT        (ITEM_PIXIE_PLATE + 192)
+#define ITEM_LAX_MINT           (ITEM_PIXIE_PLATE + 193)
+#define ITEM_RELAXED_MINT       (ITEM_PIXIE_PLATE + 194)
+#define ITEM_MODEST_MINT        (ITEM_PIXIE_PLATE + 195)
+#define ITEM_MILD_MINT          (ITEM_PIXIE_PLATE + 196)
+#define ITEM_RASH_MINT          (ITEM_PIXIE_PLATE + 197)
+#define ITEM_QUIET_MINT         (ITEM_PIXIE_PLATE + 198)
+#define ITEM_CALM_MINT          (ITEM_PIXIE_PLATE + 199)
+#define ITEM_GENTLE_MINT        (ITEM_PIXIE_PLATE + 200)
+#define ITEM_CAREFUL_MINT       (ITEM_PIXIE_PLATE + 201)
+#define ITEM_SASSY_MINT         (ITEM_PIXIE_PLATE + 202)
+#define ITEM_TIMID_MINT         (ITEM_PIXIE_PLATE + 203)
+#define ITEM_HASTY_MINT         (ITEM_PIXIE_PLATE + 204)
+#define ITEM_JOLLY_MINT         (ITEM_PIXIE_PLATE + 205)
+#define ITEM_NAIVE_MINT         (ITEM_PIXIE_PLATE + 206)
+#define ITEM_SERIOUS_MINT       (ITEM_PIXIE_PLATE + 207)
+
 #define NUM_MEGA_STONES 48 // includes the pixie plate
+
+#define IS_ITEM_TERRAIN_SEED(item) (item >= ITEM_ELECTRIC_SEED && item <= ITEM_PSYCHIC_SEED)
 
 #define NUM_UNKNOWN_SLOTS 22 // used to adjust in data/itemdata.c
 #define NUM_UNKNOWN_SLOTS_EXPLORER_KIT (NUM_UNKNOWN_SLOTS+1) // used to adjust in data/itemdata.c

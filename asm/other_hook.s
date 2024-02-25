@@ -198,11 +198,6 @@ bx r0
 
 .pool
 
-.align 2
-.global word_to_store_form_at
-word_to_store_form_at:
-.word 0
-
 
 
 // 02247A18
@@ -276,18 +271,14 @@ bx r3
 
 .pool
 
-.global space_for_setmondata
-space_for_setmondata:
-.word 0
 
-
-.global UseItemFormeChange_hook
-UseItemFormeChange_hook:
+.global UseItemMonAttrChangeCheck_hook
+UseItemMonAttrChangeCheck_hook:
 push {r1-r7}
 
 mov r0, r5
 mov r1, r4 // so that the memory can be freed
-bl UseItemFormeChangeCheck
+bl UseItemMonAttrChangeCheck
 
 pop {r1-r7}
 cmp r0, #1
@@ -299,6 +290,27 @@ bx r1
 return_to_0207C2D2:
 ldr r0, =0x0207C2D2 | 1
 bx r0
+
+.pool
+
+
+.global UseItemMonAttrLoadDiffMessage_hook
+UseItemMonAttrLoadDiffMessage_hook:
+ldr r1, =partyMenuSignal
+ldr r1, [r1]
+cmp r1, #1
+bhi _use_signal
+// default handling
+mov r1, #188 // "{STRVAR_1 0, 0, 0} changed Forme!\r"
+
+_use_signal:
+mov r0, #31
+lsl r0, #6
+ldr r0, [r5, r0]
+ldr r2, =0x0200BBA0 | 1 // NewString_ReadMsgData
+bl bx_r2
+ldr r1, =0x021E5A76 | 1
+bx r1
 
 .pool
 
@@ -345,10 +357,6 @@ bx r2
 
 .pool
 
-.global gFieldSysPtr
-gFieldSysPtr:
-.word 0
-
 .global WindowClose
 WindowClose:
 ldr r0, =0x04000050
@@ -362,11 +370,6 @@ ldr r2, =0x02041198 + 1
 bx r2
 
 .pool
-
-
-.global gTriggerDouble
-gTriggerDouble:
-.word 0
 
 
 // new method:  from the parent func
@@ -570,3 +573,22 @@ ldr     r2, =0x02089E30 + 1
 bx      r2
 
 .pool
+
+.data
+
+.align 2
+.global space_for_setmondata
+space_for_setmondata:
+.word 0
+
+.global gFieldSysPtr
+gFieldSysPtr:
+.word 0
+
+.global word_to_store_form_at
+word_to_store_form_at:
+.word 0
+
+.global gTriggerDouble
+gTriggerDouble:
+.word 0

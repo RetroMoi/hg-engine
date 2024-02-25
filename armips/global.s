@@ -17,7 +17,10 @@
 .include "armips/asm/overworlds.s" // code for overworlds, specifically repointing gOWTagToFileNum and making dimorphism a byte instead of a halfword.
 .include "armips/asm/y9.s" // add new overlay entries to the y9 table
 
+.include "armips/data/starters.s" // data definitions for which species to use for the starter Pokemon
+
 .if REUSABLE_TMS == 1
+
 .include "armips/asm/tm.s" // make tms infinite
 .include "armips/asm/forget_hm.s" // allows hm to be forgotten
 
@@ -29,10 +32,18 @@
 
 .endif
 
+.ifdef APPLY_ANTIPIRACY
+
+.include "armips/asm/antipiracy.s" // install antipiracy into the rom
+
+.endif
+
 // code addon list
-.include "armips/data/hiddenabilities.s" // the hidden ability list, 7
-.include "armips/data/baseexp.s" // the base experience list, 8
+//.include "armips/data/hiddenabilities.s" // the hidden ability list, 7
+//.include "armips/data/baseexp.s" // the base experience list, 8
 //.include "armips/data/monoverworlds.s" // built unconditionally in makefile, 9 includes the max amount of forms per mon not including gender differences
+// 10 - sSpeciesToOWGfx
+// 11 - PokeFormDataTbl
 
 /*
 CURRENT SYNTHETIC NARC ARMIPS USAGE - starting at START_ADDRESS (armips/include/config.s), sequentially
